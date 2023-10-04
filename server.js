@@ -10,9 +10,9 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public/')));
 
-app.get('/user/', (req, res) => {
+app.use('/user/', (req, res) => {
     res.show('forbidden.html');
 });
 
